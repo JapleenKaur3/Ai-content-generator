@@ -12,7 +12,8 @@ export default function ClientLayoutWrapper({
   const [totalUsage, setTotalUsage] = useState<number>(0);
 
   return (
-    <TotalUsageContext.Provider value={{ totalUsage, setTotalUsage }}>
+    <TotalUsageContext.Provider value={[totalUsage, setTotalUsage]}>
+
       <ClerkProvider>{children}</ClerkProvider>
     </TotalUsageContext.Provider>
   );
