@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Co Creater
 
-Japleen Kaur https://github.com/JapleenKaur3
+Prakul Gupta https://github.com/prakulgupta1
 
 ## Getting Started
 
