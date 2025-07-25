@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { TotalUsageContext } from "./(context)/TotalUsageContext";
 import { useState } from "react";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "next-themes";
+import { TotalUsageContext } from "./(context)/TotalUsageContext";
 
 export default function ClientLayoutWrapper({
   children,
@@ -13,8 +14,11 @@ export default function ClientLayoutWrapper({
 
   return (
     <TotalUsageContext.Provider value={[totalUsage, setTotalUsage]}>
-
-      <ClerkProvider>{children}</ClerkProvider>
+      <ClerkProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </ClerkProvider>
     </TotalUsageContext.Provider>
   );
 }
